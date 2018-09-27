@@ -1,0 +1,26 @@
+.grid-container {
+  display: grid;
+  grid-template-rows: 100vh auto;
+  grid-template-columns: min-content auto; /* size of sidebar is defined in Sidebar.css */
+}
+
+.dashboard-content {
+  background: linear-gradient(
+    180.02deg,
+    #f9f9f9 0.02%,
+    rgba(196, 196, 196, 0) 122.72%
+  );
+  z-index: -1;
+}
+
+.dashboard-content-wrapper {
+  width: 90%;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 800px) {
+  .grid-container {
+    grid-template-columns: auto;
+    grid-template-rows: 5rem auto;
+  }
+}

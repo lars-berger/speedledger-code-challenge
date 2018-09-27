@@ -1,0 +1,33 @@
+.topnav {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 4rem;
+  padding-right: 1rem;
+}
+
+.topnav-link {
+  display: flex;
+  align-items: center;
+  margin-right: 2rem;
+}
+
+.topnav-username {
+  margin-right: 0.3rem;
+}
+
+p, i {
+    color: #272727;
+}
+
+.divider {
+  background-color: #CACACA;
+  height: 1px;
+  margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 800px) {
+  .topnav {
+    display: none;
+  }
+}
