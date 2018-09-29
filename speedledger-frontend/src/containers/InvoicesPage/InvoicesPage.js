@@ -1,9 +1,15 @@
 import React, { Component } from "react";
+import { connect } from "react-redux";
 import Sidebar from "../../components/Sidebar/Sidebar";
 import TopNav from "../../components/TopNav/TopNav";
+import InvoicesCard from "../../components/InvoicesCard/InvoicesCard";
 import "./InvoicesPage.css";
 
-class App extends Component {
+class InvoicesPage extends Component {
+  componentDidMount() {
+    this.props.getInvoices();
+  }
+
   render() {
     return (
       <div className="grid-container">
@@ -12,8 +18,21 @@ class App extends Component {
           <TopNav />
           <div className="dashboard-content-wrapper">
             <h1>Invoices</h1>
-            <div className="orange-underline" />
-            <p>fdsfdsafdsafdsafdsio</p>
+            <div className="thin-underline" />
+
+            <div className="card-header">
+              <p className="card-header-id">Invoice ID</p>
+              <p className="card-header-sender">Sender</p>
+              <p className="card-header-receiver">Receiver</p>
+              <p className="card-header-amount">Amount</p>
+              <p className="card-header-date">Date</p>
+            </div>
+
+            <div className="divider" />
+
+            {this.props.invoices && (
+              <InvoicesCard invoices={this.props.invoices}/>
+            )}
           </div>
         </div>
       </div>
@@ -21,4 +40,20 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => ({
+  getInvoices: () => {
+    dispatch({
+      type: "GET_INVOICES",
+      url: "/invoices"
+    });
+  }
+});
+
+const mapStateToProps = store => ({
+  invoices: store.invoices
+});
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(InvoicesPage);

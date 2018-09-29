@@ -10,6 +10,7 @@
   width: 20vw;
   max-width: 18rem;
   padding-top: 1.2rem;
+  z-index: 10;
 }
 
 .sidebar-logo {

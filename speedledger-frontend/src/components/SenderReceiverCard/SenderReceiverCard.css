@@ -1,0 +1,29 @@
+.infoCard {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-bottom: 1px solid #cacaca;
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+}
+
+.infoCard-receiver, .infoCard-sender {
+  padding: 1rem 1.5rem;
+}
+
+.infoCard p {
+  margin: 0.3rem 0;
+}
+
+.infoCard-sender {
+  border-right: 1px solid #cacaca;
+}
+
+.infoCard-label {
+  color: #747474;
+}
+
+.infoCard-name {
+  font-size: 1.6rem;
+  padding: 0.3rem 0;
+}

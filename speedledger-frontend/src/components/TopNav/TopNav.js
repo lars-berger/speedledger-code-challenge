@@ -12,7 +12,7 @@ const TopNav = () => (
       </a>
       <p className="topnav-username">Lars Berger</p>
       <a className="topnav-link" href="#">
-        <i class="material-icons">keyboard_arrow_down</i>
+        <i className="material-icons">keyboard_arrow_down</i>
       </a>
     </aside>
     <div className="divider" />

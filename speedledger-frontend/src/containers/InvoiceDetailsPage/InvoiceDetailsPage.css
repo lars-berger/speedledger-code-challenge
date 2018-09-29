@@ -17,19 +17,18 @@
   margin: 0 auto;
 }
 
-.card-header {
+.invoice {
   display: grid;
-  grid-template-columns: 1.3fr 2fr 2fr 1.3fr 2fr 2fr;
-  grid-template-areas: "id sender receiver amount date white-space";
-  grid-column-gap: 0.2rem;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 4rem;
 }
 
-.card-header-id {
-  margin-left: 1rem;
+.infoCard {
+  order: 1;
 }
 
-.card-header p {
-  color: #747474;
+.invoiceDetails {
+  order: 2;
 }
 
 @media only screen and (max-width: 800px) {
@@ -37,11 +36,14 @@
     grid-template-columns: auto;
     grid-template-rows: 5rem auto;
   }
-  .card-header {
-    grid-template-columns: 1.3fr 2fr 2fr 1.3fr 2fr;
-    grid-template-areas: "id sender receiver amount white-space";
+  .invoice {
+    grid-template-columns: auto;
   }
-  .card-header-date {
-    display: none;
+  .invoiceDetails {
+    order: 1;
+    margin-bottom: 2rem;
+  }
+  .infoCard {
+    order: 2;
   }
 }

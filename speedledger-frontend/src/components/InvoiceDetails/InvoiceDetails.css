@@ -1,0 +1,14 @@
+.invoiceDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 1rem;
+}
+
+.invoiceDetails-label {
+  color: #747474;
+  margin: 0.2rem 0 0 0;
+}
+
+.invoiceDetails-title {
+  margin: 0;
+}

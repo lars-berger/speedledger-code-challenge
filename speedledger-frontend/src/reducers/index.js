@@ -1,18 +1,10 @@
-export default function (state = [], action) {
+export default (state = {}, action) => {
   switch (action.type) {
-    case "REGISTER":
-      return {
-        ...state,
-        loading: true,
-        attempts: state.attempts ? state.attempts + 1 : 1
-      }
-    case "REGISTER_SUCCESS":
-      return {
-        ...state,
-        token: action.res.restaurant.token,
-        loading: false
-      }
+    case "GET_INVOICES":
+      return { ...state };
+    case "GET_INVOICES_SUCCESS":
+      return { ...state, invoices: action.res };
     default:
-      return state
+      return state;
   }
 }

@@ -1,0 +1,45 @@
+.card {
+  background: #ffffff;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.03);
+  border-radius: 2px;
+}
+
+.card-item {
+  display: grid;
+  grid-template-columns: 1.3fr 2fr 2fr 1.3fr 2fr 2fr;
+  grid-template-areas: "id sender receiver amount date white-space";
+  grid-column-gap: 0.2rem;
+  grid-template-rows: 4.5rem;
+  align-items: center;
+  border-bottom: 1px solid #cacaca;
+}
+
+.card-item-id {
+  margin-left: 1rem;
+}
+
+.card-item-sender {
+  font-weight: 600;
+}
+
+.card-item-link a {
+  display: inline-block;
+  text-align: center;
+  background: #f1565e;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1);
+  padding: 0.3rem 0.9rem;
+  color: white;
+  font-weight: 600;
+}
+
+@media only screen and (max-width: 800px) {
+  .card-item {
+    grid-template-columns: 1.3fr 2fr 2fr 1.3fr 2fr;
+    grid-template-areas: "id sender receiver amount white-space";
+  }
+  .card-item-date {
+    display: none;
+  }
+}
